@@ -31,16 +31,15 @@ while 1:
     # Cleanup
     		p.join()
 	time.sleep(.004) #50ms 
-	ser.write('123')
-	#ser.write('%d'% 12)
+	ser.write('1')
 	time.sleep(.004)
-	ser.write('456')
+	ser.write('2')
 	time.sleep(.004)
-	ser.write('789')
+	ser.write('3')
 	time.sleep(.004)
-	ser.write('654')
+	ser.write('4')
 	time.sleep(.004)
-	"""ser.write('5')
+	ser.write('5')
 	time.sleep(.002)
 	ser.write('6')
 	time.sleep(.002)
@@ -55,14 +54,5 @@ while 1:
 	ser.write('3')	
 	time.sleep(.002)
 	ser.write('4')
-	time.sleep(.002)"""
-	#ser.write('273')
-	#time.sleep(.002)
-	#ser.write('964')
-	#time.sleep(.002)
-	"""ser.write('%c'% 14)
-	time.sleep(.1)
-	ser.write('%c'% 15)
-	time.sleep(.1)
-
-"""
+	time.sleep(.002)
+	
