@@ -59,11 +59,11 @@ if (a==1)
   ch4=ch41*100+ch42*10+ch43;
 int ang=map(ch1,0,255,0,100);
 myservo1.write(ang);
-ang=map(ch2,0,255,0,100);
+int ang=map(ch2,0,255,0,100);
 myservo2.write(ang);
-ang=map(ch3,0,255,0,100);
+int ang=map(ch3,0,255,0,100);
 myservo3.write(ang);
-ang=map(ch4,0,255,0,100);
+int ang=map(ch4,0,255,0,100);
 myservo4.write(ang);
 Serial.write(ch1);
 Serial.write(ch2);

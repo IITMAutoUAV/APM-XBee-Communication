@@ -40,14 +40,10 @@ static void init_rc_in()
     g.rc_2.set_type(RC_CHANNEL_ANGLE_RAW);
     g.rc_4.set_type(RC_CHANNEL_ANGLE_RAW);
 
-    rc_ch[CH_1] = ch1;
-    rc_ch[CH_2] = ch2;
-    rc_ch[CH_3] = ch3;
-    rc_ch[CH_4] = ch4;
-    /*rc_ch[CH_1] = &g.rc_1;
+    rc_ch[CH_1] = &g.rc_1;
     rc_ch[CH_2] = &g.rc_2;
     rc_ch[CH_3] = &g.rc_3;
-    rc_ch[CH_4] = &g.rc_4;*/
+    rc_ch[CH_4] = &g.rc_4;
     rc_ch[CH_5] = &g.rc_5;
     rc_ch[CH_6] = &g.rc_6;
     rc_ch[CH_7] = &g.rc_7;
@@ -134,10 +130,14 @@ static void read_radio()
 {
     if (APM_RC.GetState() == 1) {
         new_radio_frame = true;
-        g.rc_1.set_pwm(APM_RC.InputCh(CH_1));
+        g.rc_1.set_pwm(ch1);
+        g.rc_2.set_pwm(ch2);
+        g.rc_3.set_pwm(ch3);
+        g.rc_4.set_pwm(ch4);
+        /*g.rc_1.set_pwm(APM_RC.InputCh(CH_1));
         g.rc_2.set_pwm(APM_RC.InputCh(CH_2));
         g.rc_3.set_pwm(APM_RC.InputCh(CH_3));
-        g.rc_4.set_pwm(APM_RC.InputCh(CH_4));
+        g.rc_4.set_pwm(APM_RC.InputCh(CH_4));*/
         g.rc_5.set_pwm(APM_RC.InputCh(CH_5));
         g.rc_6.set_pwm(APM_RC.InputCh(CH_6));
         g.rc_7.set_pwm(APM_RC.InputCh(CH_7));

@@ -130,10 +130,14 @@ static void read_radio()
 {
     if (APM_RC.GetState() == 1) {
         new_radio_frame = true;
-        g.rc_1.set_pwm(APM_RC.InputCh(CH_1));
+        g.rc_1.set_pwm(ch1o);
+        g.rc_2.set_pwm(ch2o);
+        g.rc_3.set_pwm(ch3o);
+        g.rc_4.set_pwm(ch4o);
+        /*g.rc_1.set_pwm(APM_RC.InputCh(CH_1));
         g.rc_2.set_pwm(APM_RC.InputCh(CH_2));
         g.rc_3.set_pwm(APM_RC.InputCh(CH_3));
-        g.rc_4.set_pwm(APM_RC.InputCh(CH_4));
+        g.rc_4.set_pwm(APM_RC.InputCh(CH_4));*/
         g.rc_5.set_pwm(APM_RC.InputCh(CH_5));
         g.rc_6.set_pwm(APM_RC.InputCh(CH_6));
         g.rc_7.set_pwm(APM_RC.InputCh(CH_7));
