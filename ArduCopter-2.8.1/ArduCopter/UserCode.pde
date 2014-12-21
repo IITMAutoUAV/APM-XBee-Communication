@@ -65,10 +65,10 @@ ang=map(ch3,0,255,0,100);
 myservo3.write(ang);
 ang=map(ch4,0,255,0,100);
 myservo4.write(ang);
-Serial.write(ch1);
+/*Serial.write(ch1);
 Serial.write(ch2);
 Serial.write(ch3);
-Serial.write(ch4);
+Serial.write(ch4);*/
 }
 
 } // put your 50Hz code here

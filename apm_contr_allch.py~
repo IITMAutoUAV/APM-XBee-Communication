@@ -1,7 +1,6 @@
 import serial
 import time
 import multiprocessing
-
 ser=serial.Serial("/dev/ttyUSB0", 9600)
 
 
